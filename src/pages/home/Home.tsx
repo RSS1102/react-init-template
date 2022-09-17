@@ -1,10 +1,12 @@
+import { useNavigate } from "react-router"
 const Home = () => {
+    const navigate = useNavigate();
     return (
         <>
-            <div>
-                213
-            </div>
+            <span>home</span>
+            <button onClick={() => { navigate('/redux') }} >Redux</button>
         </>
     )
+
 }
 export default Home

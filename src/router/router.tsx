@@ -15,5 +15,9 @@ const router = createBrowserRouter([
         path: "/user",
         element: Lazyload(React.lazy(() => import('@/pages/user/User'))),
     },
+    {
+        path: "/redux",
+        element: Lazyload(React.lazy(() => import('@/pages/redux/Redux'))),
+    },
 ]);
 export default router
