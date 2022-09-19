@@ -11,6 +11,7 @@ const router = createBrowserRouter([
         path: "/home",
         element: <Home />,
     },
+    // 路由懒加载
     {
         path: "/user",
         element: Lazyload(React.lazy(() => import('@/pages/user/User'))),
@@ -19,5 +20,10 @@ const router = createBrowserRouter([
         path: "/redux",
         element: Lazyload(React.lazy(() => import('@/pages/redux/Redux'))),
     },
+    // 路由404
+    {
+        path: '*',
+        element: Lazyload(React.lazy(() => import('@/router/config/PageNotFound'))),
+    }
 ]);
 export default router
