@@ -1,4 +1,4 @@
-import { Add, Dec, incrementByAmount } from "@/Redux/counter";
+import { Add, Dec, incrementByAmount } from "@/Redux/model/counter";
 import { counter } from "@/Redux/store";
 import { useDispatch, useSelector } from "react-redux";
 
