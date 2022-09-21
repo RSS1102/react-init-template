@@ -11,5 +11,5 @@
 - [X] [状态管理](https://github.com/RSS1102/react-init-template/blob/main/src/pages/redux/Redux.tsx "Redux")
 - [ ] mock
 - [ ] 错误边界
-- [ ] 主题切换
+- [x] [主题切换 ](https://github.com/RSS1102/react-init-template/tree/main/src/utils/theme "Theme")
 - [ ] eslint
