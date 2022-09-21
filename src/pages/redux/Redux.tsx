@@ -1,9 +1,9 @@
 import { Add, Dec, incrementByAmount } from "@/Redux/model/counter";
-import { counter } from "@/Redux/store";
+import { counterType } from "@/Redux/storeTpye";
 import { useDispatch, useSelector } from "react-redux";
 
 const Redux = () => {
-  const count = useSelector((state: counter) => state.counter.value);
+  const count = useSelector((state: counterType) => state.counter.value);
   const dispatch = useDispatch();
   return (
     <div>

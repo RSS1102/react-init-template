@@ -1,20 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "./model/counter";
 import loginReducer from "./model/login";
-export interface counter {
-  counter: {
-    value: number;
-  };
-}
+import themeReducer from "./model/theme";
 
-export interface login {
-  login: {
-    isLogin: boolean;
-  };
-}
 export default configureStore({
   reducer: {
+    theme: themeReducer,
     counter: counterReducer,
-    login:loginReducer
+    login: loginReducer,
   },
 });

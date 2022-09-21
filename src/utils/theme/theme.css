@@ -1,0 +1,10 @@
+:root[data-theme="dark"] {
+  --page-background-color: #000000;
+}
+:root[data-theme="white"] {
+  --page-background-color: #ffffff;
+}
+html {
+  background-color: var(--page-background-color);
+  transition: background-color 0.5s ease-in-out;
+}
