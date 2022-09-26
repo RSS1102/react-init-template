@@ -1,4 +1,4 @@
-import useTheme from "@/utils/theme/useTheme";
+import useTheme from "@/config/theme/useTheme";
 import { useNavigate } from "react-router"
 import { setTheme } from "@/Redux/model/theme";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,12 +10,14 @@ const Home = () => {
     const Theme = () => {
         dispatch(setTheme())
         useTheme(isDark)
+
     }
     return (
         <>
             <span>home</span>
             <button onClick={() => { navigate('/redux') }} >Redux</button>
             <button onClick={() => { Theme() }}>改变颜色</button>
+            <button onClick={() => { navigate('/error') }} >错误边界</button>
         </>
     )
 

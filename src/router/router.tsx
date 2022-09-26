@@ -11,11 +11,10 @@ const router = createBrowserRouter([
         path: "/home",
         element: <Home />,
     },
-    // 路由懒加载
-    // {
-    //     path: "/login",
-    //     element: Lazyload(React.lazy(() => import('@/pages/login/Login'))),
-    // },
+    {
+        path: "/error",
+        element: Lazyload(React.lazy(() => import('@/pages/errorElement/ErrorElement'))),
+    },
     {
         path: "/user",
         element: Lazyload(React.lazy(() => import('@/pages/user/User'))),

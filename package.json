@@ -8,7 +8,7 @@
     "dev:pro": "vite --mode development",
     "build": "tsc && vite build --mode production ",
     "build:dev": "tsc && vite build --mode development",
-    "preview": "vite preview"
+    "preview": "vite preview --mode development"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
