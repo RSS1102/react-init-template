@@ -10,6 +10,6 @@
 - [x] [多环境配置](https://github.com/RSS1102/react-init-template/blob/main/.env.development "Multi environment development configuration")
 - [X] [状态管理](https://github.com/RSS1102/react-init-template/blob/main/src/pages/redux/Redux.tsx "Redux")
 - [ ] mock
-- [ ] 错误边界
+- [x] [错误边界](https://github.com/RSS1102/react-init-template/blob/main/src/config/ErrorBoundary/ErrorBoundary.tsx "ErrorBoundary")
 - [x] [主题切换 ](https://github.com/RSS1102/react-init-template/tree/main/src/utils/theme "Theme")
-- [ ] eslint
+- [x] [eslint-prettier](https://github.com/RSS1102/react-init-template/blob/main/.eslintrc.cjs "eslint")
