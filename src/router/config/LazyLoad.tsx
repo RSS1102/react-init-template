@@ -1,11 +1,10 @@
-import React, { Suspense } from "react";
+import React, { Suspense } from 'react';
 
 const Lazyload = (Comp: React.LazyExoticComponent<any>): React.ReactNode => {
-    return (
-        <Suspense>
-            <Comp />
-        </Suspense>
-    )
-
-}
-export default Lazyload
+  return (
+    <Suspense>
+      <Comp />
+    </Suspense>
+  );
+};
+export default Lazyload;

@@ -14,7 +14,7 @@ module.exports = {
   // 对象的 key 仅在必要时用引号
   quoteProps: 'as-needed',
   // jsx 不使用单引号，而使用双引号
-  jsxSingleQuote: false,
+  jsxSingleQuote: true,
   // 末尾需要有逗号
   trailingComma: 'all',
   // 大括号内的首尾需要空格
@@ -37,7 +37,7 @@ module.exports = {
   // vue 文件中的 script 和 style 内不用缩进
   vueIndentScriptAndStyle: false,
   // 换行符使用 lf
-  endOfLine: 'lf',
+  endOfLine: 'auto',
   // 格式化嵌入的内容
   embeddedLanguageFormatting: 'auto',
   // html, vue, jsx 中每个属性占一行

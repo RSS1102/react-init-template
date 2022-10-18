@@ -1,7 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 export const loginReducer = createSlice({
-  name: "login",
+  name: 'login',
   initialState: {
     isLogin: false,
   },

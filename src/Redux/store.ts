@@ -1,7 +1,7 @@
-import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "./model/counter";
-import loginReducer from "./model/login";
-import themeReducer from "./model/theme";
+import { configureStore } from '@reduxjs/toolkit';
+import counterReducer from './model/counter';
+import loginReducer from './model/login';
+import themeReducer from './model/theme';
 
 export default configureStore({
   reducer: {

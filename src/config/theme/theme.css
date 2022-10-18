@@ -1,7 +1,7 @@
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   --page-background-color: #000000;
 }
-:root[data-theme="white"] {
+:root[data-theme='white'] {
   --page-background-color: #ffffff;
 }
 html {
