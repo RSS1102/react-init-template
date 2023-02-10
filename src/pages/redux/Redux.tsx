@@ -1,21 +1,21 @@
-import { Add, Dec, incrementByAmount } from '@/Redux/model/counter';
-import { counterType } from '@/Redux/storeTpye';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch, useAppSelector } from '@/redux/hook';
+import { addCount, decCount, incCount } from '@/redux/model/counter';
+import { CounterStateType } from '@/redux/storeType';
 
 const Redux = () => {
-  const count = useSelector((state: counterType) => state.counter.value);
-  const dispatch = useDispatch();
+  const count = useAppSelector((state) => state.counterReducer.count);
+  const dispatch = useAppDispatch();
   return (
     <div>
       <div>
-        <button aria-label="Increment value" onClick={() => dispatch(Dec())}>
+        <button aria-label='Increment value' onClick={() => dispatch(decCount())}>
           Increment
         </button>
         <span>{count}</span>
-        <button aria-label="Decrement value" onClick={() => dispatch(Add())}>
+        <button aria-label='Decrement value' onClick={() => dispatch(addCount())}>
           Decrement
         </button>
-        <button aria-label="Decrement value" onClick={() => dispatch(incrementByAmount(3))}>
+        <button aria-label='Decrement value' onClick={() => dispatch(incCount({ count: 5 }))}>
           Decrement
         </button>
       </div>

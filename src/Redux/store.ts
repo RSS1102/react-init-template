@@ -1,12 +1,17 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from './model/counter';
-import loginReducer from './model/login';
-import themeReducer from './model/theme';
+import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
+import loginReducer from '@/redux/model/login';
+import themeReducer from '@/redux/model/theme';
+import counterReducer from '@/redux/model/counter';
 
-export default configureStore({
+export const store = configureStore({
   reducer: {
-    theme: themeReducer,
-    counter: counterReducer,
-    login: loginReducer,
+    loginReducer: loginReducer,
+    themeReducer: themeReducer,
+    counterReducer: counterReducer,
   },
 });
+export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;
+export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, RootState, unknown, Action<string>>;
+
+export default store;

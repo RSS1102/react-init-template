@@ -1,15 +1,15 @@
 import useTheme from '@/config/theme/useTheme';
 import { useNavigate } from 'react-router';
-import { setTheme } from '@/Redux/model/theme';
+import { setTheme } from '@/redux/model/theme';
 import { useDispatch, useSelector } from 'react-redux';
-import { themeType } from '@/Redux/storeTpye';
+import { ThemeStateType } from '@/redux/storeType';
 const Home = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const isDark = useSelector((state: themeType) => state.theme.isDark);
+  const isDark = useSelector((state: ThemeStateType) => state.isDark);
   const Theme = () => {
-    dispatch(setTheme());
-    useTheme(isDark);
+    dispatch(setTheme({ isDark: !isDark }));
+    useTheme(!isDark);
   };
   return (
     <>

@@ -1,23 +1,26 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { CounterStateType } from '../storeType';
 
-export const counterSlice = createSlice({
+const initialState: CounterStateType = {
+  count: 1,
+};
+
+export const counterReducer = createSlice({
   name: 'counter',
-  initialState: {
-    value: 1,
-  },
+  initialState: initialState,
   reducers: {
-    Add: (state) => {
-      state.value += 1;
+    addCount: (state) => {
+      state.count += 1;
     },
-    Dec: (state) => {
-      state.value -= 1;
+    decCount: (state) => {
+      state.count -= 1;
     },
-    incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload;
+    incCount: (state, action: PayloadAction<CounterStateType>) => {
+      state.count += action.payload.count;
     },
   },
 });
 
-export const { Add, Dec, incrementByAmount } = counterSlice.actions;
+export const { addCount, decCount, incCount } = counterReducer.actions;
 
-export default counterSlice.reducer;
+export default counterReducer.reducer;

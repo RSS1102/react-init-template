@@ -1,13 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { LoginStateType } from '../storeType';
+
+const initialState: LoginStateType = {
+  token: '',
+};
 
 export const loginReducer = createSlice({
   name: 'login',
-  initialState: {
-    isLogin: false,
-  },
+  initialState: initialState,
   reducers: {
-    setToken: (state) => {
-      state.isLogin = true;
+    setToken: (state, action: PayloadAction<LoginStateType>) => {
+      console.log(action);
+      state.token = action.payload.token;
     },
   },
 });
