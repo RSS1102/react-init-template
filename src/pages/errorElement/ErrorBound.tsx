@@ -1,11 +1,13 @@
-import ErrorBoundary from '@/config/ErrorBoundary/ErrorBoundary';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const ErrorBound = () => {
   const [count, setCount] = useState(0);
   const addCount = () => {
     setCount(count + 1);
   };
+  useEffect(() => {
+    throw new Error('报错!');
+  }, [count]);
   return (
     <div>
       {/* 错误边界只能针对子组件 */}
